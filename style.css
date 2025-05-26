@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  color: #333;
+}
+
+header {
+  background-color: #ff6f61;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #ffcc70;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+/* .txt, .vdo{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+} */
+nav button:hover {
+  transform: scale(1.1);
+  background-color: #ffe39f;
+}
+
+
+.video-section {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.video-section h2 {
+  margin-bottom: 20px;
+}
+
+.video-section video {
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+section {
+  margin: 20px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+video {
+  border: 5px solid #ffb347;
+  border-radius: 8px;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #6a0572;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #9b1d9b;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ff6f61;
+  color: white;
+}

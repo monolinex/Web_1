@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Awesome Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to My Awesome Blog</h1>
+    <nav>
+      <button onclick="trackClick('home_button')">Home</button>
+      <button onclick="trackClick('about_button')">About</button>
+      <button onclick="trackClick('contact_button')">Contact</button>
+    </nav>
+  </header>
+
+
+ 
+<section class="video-section">
+    <h2 class="txt">Watch My Video</h2>
+    <video class="vdo" width="auto" height="400" controls autoplay onclick="trackClick('video_play')">
+      <source src="./vdo.mp4" type="video/webm" />
+      Your browser does not support HTML5 video.
+    </video>
+  </section>
+  
+
+  <section class="form-section">
+    <h2>Contact Me</h2>
+    <form id="contactForm" onsubmit="submitForm(); return false;">
+      <input type="text" placeholder="Your Name" name="name" required />
+      <input type="email" placeholder="Your Email" name="email" required />
+      <textarea placeholder="Your Message" name="message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section class="upload-section">
+    <h2>Upload Your File</h2>
+    <input type="file" id="fileInput" onchange="trackClick('file_upload')" />
+  </section>
+
+  <footer>
+    <p>Made with passion & colors. Track everything using GA4!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

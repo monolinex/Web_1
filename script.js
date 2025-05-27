@@ -60,7 +60,7 @@ window.addEventListener('load', () =>
 // Track button clicks (e.g., Home, About, Contact)
 function trackClick(tag) 
 {
-  gtag('event', 'button_click_type', {'button_click_type': `${tag}_clicked`});
+  gtag('event', `${tag}_clicked`});
 }
 
 // Video Play
@@ -68,15 +68,13 @@ const video = document.querySelector("video");
 if (video) 
 {
   video.addEventListener("play", () => 
-    { 
-      gtag('event', 'video_play_count', {'video_play_count': 1});
-      gtag('event', 'video_play_status',{'video_play_status': 'played'});
+    {   
+      gtag('event', 'video_played');
     });
   
-   video.addEventListener("pause", () => 
-     {
-       gtag('event', 'video_play_status', {'video_play_status': 'paused'});
-     });
+  video.addEventListener("pause", () => 
+    {gtag('event', 'video_paused');
+    });
 }
 
 // Form Submission
@@ -84,7 +82,7 @@ function submitForm()
 {
   const form = document.getElementById("contactForm");
   const formData = new FormData(form);
-  gtag('event', 'form_submissions', {'form_submissions': 1});
+  gtag('event', 'form_submitted');
   alert("Thanks, your message was sent!");
   form.reset();
 }
@@ -95,7 +93,7 @@ formInputs.forEach(input =>
   {
     input.addEventListener("focus", () => 
       {
-        gtag('event', 'entered_form_field': input.name});
+        gtag('event', `${input.name}_entered`);
       });
   });
 
@@ -109,3 +107,5 @@ if (fileInput)
       gtag('event', `file_uploaded - ${fileName}`);
     });
 }
+
+

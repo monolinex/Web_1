@@ -95,7 +95,7 @@ formInputs.forEach(input =>
   {
     input.addEventListener("focus", () => 
       {
-        gtag('event', 'entered_form_field', {'entered_form_field': input.name});
+        gtag('event', 'entered_form_field': input.name});
       });
   });
 

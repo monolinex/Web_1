@@ -96,8 +96,8 @@ function submitForm() {
 const formInputs = document.querySelectorAll("#contactForm input, #contactForm textarea");
 formInputs.forEach(input => {
   input.addEventListener("focus", () => {
-    gtag('event', 'form_field_focus', {
-      'form_field_focus': input.name
+    gtag('event', 'entered_form_field', {
+      'entered_form_field': input.name
     });
   });
 });
